@@ -1,0 +1,75 @@
+Python is a popular general-purpose programming language.
+It was created by Guido van Rossum, and released in 1991.
+It is used in machine learning, web development, desktop applications, and many other fields. 
+Fortunately for beginners, Python has a simple, easy-to-use syntax. 
+This makes Python a great language to learn for beginners.
+Why Learn Python?
+Python is easy to learn. Its syntax is easy and code is very readable.
+Python has a lot of applications. It's used for developing web applications, data science, rapid application development, and so on.
+Python allows you to write programs in fewer lines of code than most of the programming languages.
+The popularity of Python is growing rapidly. Now it's one of the most popular programming languages.
+
+
+Program 1: Read Python.txt file and Print it in Reverse.
+
+Program 2: Read Python.txt file and Print total number of lines and words in it.
+
+Program 3: Read Python.txt file and Print unique word with its count.
+
+Program 4: Read Python.txt file and Print largest and smallest word from it.
+
+Program 5: Read Python.txt file. Convert it into upper case and write into another file "Python_Upper.txt"
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+					SOLUTION
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Program 1: Read Python.txt file and Print it in Reverse.
+-->list=["Python is a popular general-purpose programming language.",
+"It was created by Guido van Rossum, and released in 1991.",
+"It is used in machine learning, web development, desktop applications, and many other fields.", 
+"Fortunately for beginners, Python has a simple, easy-to-use syntax.", 
+"This makes Python a great language to learn for beginners.",
+"Why Learn Python?",
+"Python is easy to learn. Its syntax is easy and code is very readable.",
+"Python has a lot of applications. It's used for developing web applications, data science, rapid application development, and so on.",
+"Python allows you to write programs in fewer lines of code than most of the programming languages.",
+"The popularity of Python is growing rapidly. Now it's one of the most popular programming languages."]
+
+txtfile=open("D:\\Aastha\\22BCA234\\DB&PYTHON\\Python.txt","w")
+txtfile.writelines(list)
+txtfile=open("D:\\Aastha\\22BCA234\\DB&PYTHON\\Python.txt","r")
+reading_file=txtfile.read()
+print(reading_file)
+txtfile=open("D:\\Aastha\\22BCA234\\DB&PYTHON\\Python.txt","r")
+reading_file_inverse=txtfile.readlines()[::-1]
+print(reading_file_inverse)
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Program 2: Read Python.txt file and Print total number of lines and words in it.
+-->with open("D:\\Aastha\\22BCA234\\DB&PYTHON\\Python.txt","r")as txt_file:
+    	lines=len(txt_file.readlines())
+   	 print(f"Total number of lines is:{lines}")
+    with open("D:\\Aastha\\22BCA234\\DB&PYTHON\\Python.txt","r")as txt_file:
+    	reading=txt_file.read()
+   	words=reading.split()
+    	no_of_words=len(words)
+    	print(f"Total number of words is {no_of_words}")
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Program 3: Read Python.txt file and Print unique word with its count.
+-->with open("D:\\Aastha\\22BCA234\\DB&PYTHON\\Python.txt","r")as txt_file: 
+    	reading=txt_file.read()
+    	unique_words=set(reading)
+    	print("Unique words are:-\n")
+    	print(unique_words)
+    	count=0
+    	for i in unique_words:
+    		count+=1
+   	print(count)
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Program 4: Read Python.txt file and Print largest and smallest word from it.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Program 5: Read Python.txt file. Convert it into upper case and write into another file "Python_Upper.txt"
+-->with open("D:\\Aastha\\22BCA234\\DB&PYTHON\\Python.txt","r")as txt_file: 
+   	 reading=txt_file.read().upper()
+     with open("D:\\Aastha\\22BCA234\\DB&PYTHON\\Python_upper.txt","w")as uppper_txt_file: 
+   	 uppper_txt_file.write(reading)
+
+--------------------------------*********************************************************************------------------------------------------------------------------
